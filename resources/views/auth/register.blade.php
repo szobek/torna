@@ -50,6 +50,18 @@
             @endif
         </div>
 
+        <div class="form-group form-floating mb-3">
+            <select name="guest" id="userType" class="form-control" >
+                <option value="0">Guest</option>
+                <option value="1">Admin</option>
+                <option value="4">wrong</option>
+            </select>
+            <label for="userType">User type</label>
+            @if ($errors->has('guest'))
+                <span class="text-danger text-left">{{ $errors->first('guest') }}</span>
+            @endif
+        </div>
+
         <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
         
     </form>

@@ -163,8 +163,8 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'guest' => [
+            'in' => 'user type error',
         ],
     ],
 
