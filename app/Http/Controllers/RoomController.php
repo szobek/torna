@@ -26,7 +26,20 @@ class RoomController extends Controller
         $room->price=2500;
         $room->save();
 
-        // dd($room);
+    }
+    public function createRoomAdmin(){
+
+        $room= new Room();
+        $room->num = 12;
+        $room->floor = 0;
+        $room->description = "tesztelés admin";
+        $room->img_dir = "tesztelés admin";
+        $room->climatic=false;
+        $room->window=false;
+        $room->mirror=false;
+        $room->price=2500;
+        $room->save();
+
     }
 }
 
