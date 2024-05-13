@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Room;
 use Illuminate\Http\Request;
+use PhpParser\Node\Expr\Cast\Object_;
 
 class RoomController extends Controller
 {
@@ -40,6 +41,17 @@ class RoomController extends Controller
         $room->price=2500;
         $room->save();
 
+    }
+
+    public function getRoom(string $id): Object {
+        $room = Room::find($id);
+        return response()->json($room);
+    }
+
+    public function updateRoom(string $id,Request $request):Object{
+        $room = Room::find($id);
+        $room->update($request->all());
+        return response()->json($room);
     }
 }
 
